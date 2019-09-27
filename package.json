@@ -1,0 +1,12 @@
+{
+  "name": "ld-vanilla-template",
+  "version": "0.0.1",
+  "description": "template for vanilla javascript project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel watch index.html",
+    "prod": "parcel build index.html"
+  },
+  "author": "",
+  "license": "MIT"
+}
