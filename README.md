@@ -10,8 +10,5 @@ Stack:
 
 TODO:
 
-- Solve problem with GitHub Pages and Parcel
-- Configure Webpack instead of Parcel
-- Configure Jest with DOM testing library
 - Get husky execute linter and tests in pre-push
 - Use PostCSS
