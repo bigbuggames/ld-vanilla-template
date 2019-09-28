@@ -6,12 +6,10 @@ Stack:
 - Module bundler: [Parcel](https://parceljs.org/)
 - Styles: CSS with [BEM](http://getbem.com/introduction/)
 - Audio: [Howler](https://howlerjs.com/)
+- RNG: [SeedRandom](https://github.com/davidbau/seedrandom)
 
 Missing:
 
-- Need to search for a good seeded RNG library
-- Configure Prettier
 - Configure Jest with DOM testing library
+- Get husky execute linter and tests in pre-push
 - Take a look into PostCSS
-- Configure GitHub Pages
-- Configure Husky

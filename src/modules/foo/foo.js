@@ -1,1 +1,1 @@
-console.log("this is the foo module");
+console.log("this is the foo module modified");
