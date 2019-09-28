@@ -3,4 +3,3 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"H5wu":[function(require,module,exports) {
 "use strict";require("./styles.css"),document.getElementById("main").innerHTML='\n<h1>Hello Vanilla!</h1>\n<div>\n  We use Parcel to bundle this sandbox, you can find more info about Parcel\n  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.\n</div>\n';
 },{"./styles.css":"nup1"}]},{},["H5wu"], null)
-//# sourceMappingURL=src/foo.e2f8b07a.js.map
