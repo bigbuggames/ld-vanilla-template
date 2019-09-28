@@ -8,8 +8,10 @@ Stack:
 - Audio: [Howler](https://howlerjs.com/)
 - RNG: [SeedRandom](https://github.com/davidbau/seedrandom)
 
-Missing:
+TODO:
 
+- Solve problem with GitHub Pages and Parcel
+- Configure Webpack instead of Parcel
 - Configure Jest with DOM testing library
 - Get husky execute linter and tests in pre-push
-- Take a look into PostCSS
+- Use PostCSS
