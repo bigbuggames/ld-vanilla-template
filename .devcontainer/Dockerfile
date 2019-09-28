@@ -15,12 +15,23 @@ ENV DEBIAN_FRONTEND=noninteractive
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
+# Install actual git version
+RUN apt-get update \
+    && apt-get -y install make libssl-dev libghc-zlib-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip 2>&1 \
+    && wget https://github.com/git/git/archive/v2.23.0.zip -O git.zip \
+    && unzip git.zip \
+    && cd git-* \
+    && make prefix=/usr/local all \
+    && make prefix=/usr/local install \
+    && cd .. \
+    && rm -rf git-* git.zip
+
 # Configure apt and install packages
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \ 
     #
     # Verify git and needed tools are installed
-    && apt-get install -y git procps \
+    && apt-get install -y procps \
     #
     # Remove outdated yarn from /opt and install via package 
     # so it can be easily updated via apt-get upgrade yarn
