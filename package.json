@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
+    "lint": "eslint ./src",
     "clean": "rimraf ./dist",
     "dev": "parcel serve ./src/index.html --port 3000",
     "prod": "npm run clean && parcel build ./src/index.html --no-source-maps --public-url /ld-vanilla-template",
@@ -13,8 +14,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && npm test",
-      "pre-push": "npm test"
+      "pre-commit": "pretty-quick --staged && npm run lint && npm test",
+      "pre-push": "npm run lint && npm test"
     }
   },
   "devDependencies": {
@@ -25,6 +26,7 @@
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.0",
     "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-jest": "^22.17.0",
     "gh-pages": "^2.1.1",
     "howler": "^2.1.2",
     "husky": "^3.0.7",

@@ -1,7 +1,6 @@
 import {
   getByLabelText,
   getByText,
-  getByTestId,
   queryByTestId,
   // Tip: all queries are also exposed on an object
   // called "queries" which you could import here as well

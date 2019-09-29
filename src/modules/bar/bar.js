@@ -1,7 +1,4 @@
 export function getExampleDOM() {
-  // This is just a raw example of setting up some DOM
-  // that we can interact with. Swap this with your UI
-  // framework of choice 😉
   const div = document.createElement("div");
   div.innerHTML = `
     <label for="username">Username</label>
@@ -13,9 +10,6 @@ export function getExampleDOM() {
   const input = div.querySelector("input");
 
   button.addEventListener("click", () => {
-    console.log("button clicked!");
-    // let's pretend this is making a server request, so it's async
-    // (you'd want to mock this imaginary request in your unit tests)...
     setTimeout(() => {
       const printedUsernameContainer = document.createElement("div");
       printedUsernameContainer.innerHTML = `
