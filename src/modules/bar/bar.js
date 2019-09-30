@@ -1,7 +1,14 @@
+import { css } from "linaria";
+
+const tomatoLabel = css`
+  padding: 1em;
+  color: tomato;
+`;
+
 export function getExampleDOM() {
   const div = document.createElement("div");
   div.innerHTML = `
-    <label for="username">Username</label>
+    <label for="username" class=${tomatoLabel}>Username</label>
     <input id="username" />
     <button>Print Username</button>
   `;

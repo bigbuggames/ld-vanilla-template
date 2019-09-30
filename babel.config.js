@@ -4,10 +4,10 @@ module.exports = {
       "@babel/preset-env",
       {
         targets: {
-          node: "current",
-        },
-      },
+          node: "current"
+        }
+      }
     ],
-    // "linaria/babel",
-  ],
+    "linaria/babel"
+  ]
 };
