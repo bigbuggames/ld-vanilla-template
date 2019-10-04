@@ -1,14 +1,12 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 module.exports = [
   {
-    test: /\.js$/,
+    test: /\.ts$/,
     exclude: /node_modules/,
     use: [
       {
         loader: "babel-loader",
         options: {
-          presets: ["@babel/preset-env"],
+          presets: ["@babel/preset-typescript"],
           plugins: [
             "@babel/plugin-transform-computed-properties",
             "@babel/plugin-proposal-object-rest-spread",
@@ -18,23 +16,6 @@ module.exports = [
       },
       {
         loader: "linaria/loader",
-        options: {
-          sourceMap: process.env.NODE_ENV !== "production"
-        }
-      }
-    ]
-  },
-  {
-    test: /\.css$/,
-    use: [
-      {
-        loader: MiniCssExtractPlugin.loader,
-        options: {
-          hmr: process.env.NODE_ENV !== "production"
-        }
-      },
-      {
-        loader: "css-loader",
         options: {
           sourceMap: process.env.NODE_ENV !== "production"
         }
